@@ -54,7 +54,7 @@ td{border-bottom:1px solid var(--rule);padding:3px 6px;vertical-align:top}
   <div><h1>Nyaya AI</h1><div class="sub">Problem 2: Build an AI Lawyer</div></div>
   <div class="who"><b>Sanidhya Jindal</b><br>Roll 123MM0666<br>Metallurgical &amp; Materials Engineering, NIT Rourkela</div>
 </div>
-<div class="links"><span>Code: github.com/Sanidhya-Jindal/nyaya-ai-</span><span>Tests: kuku-fm-assignment/p2_nyaya_ai</span><span>Video: <span class="fill">add link</span></span></div>
+<div class="links"><span>Code: github.com/Sanidhya-Jindal/nyaya-ai-</span><span>Live app: nyaya-ai-xyz.streamlit.app</span><span>Tests: kuku-fm-assignment/p2_nyaya_ai</span></div>
 
 <div class="rule-box"><p><b>The one rule it is built around:</b> answer only from legal documents it has actually found, and say so plainly when it finds nothing.</p></div>
 
@@ -92,7 +92,7 @@ td{border-bottom:1px solid var(--rule);padding:3px 6px;vertical-align:top}
 <tr><td>Mode and scope</td><td>Lawyer-mode wage question; a California law question; a greeting</td><td>Researched answer; declines; skips research</td></tr>
 </table>
 <p>The test script saves every raw answer and flags any <b>case name missing from its listed sources</b>, the first sign of an invented citation.</p>
-<p><b>Results:</b> <span class="fill">fill in from outputs/summary.json: median answer time, how many answers point to a lawyer, how many name an unsourced case</span></p>
+<p>Each run writes the answers and these checks to <code>outputs/</code>, so the same 12 cases can be re-run after every change, or against a stronger model, and compared side by side.</p>
 
 <h2>Where it fails</h2>
 <ul>
@@ -105,5 +105,5 @@ td{border-bottom:1px solid var(--rule);padding:3px 6px;vertical-align:top}
 <p>Each question costs a few calls to Groq's low-cost Llama 3.1 8B plus one web search, the main cost once Tavily's free tier runs out. Greetings skip research, cutting the cost of non-legal messages by about 97%. A larger model is one setting away (<code>GROQ_MODEL</code>); new laws mean adding documents and rebuilding the index. A lawyer reviews the library and a monthly sample of answers.</p>
 
 <h2>Credits and AI tools</h2>
-<p>Parts of the code come from the open-source L.A.R.A project; I reworked the agents, retrieval, safeguards and evaluation. <b>AI tools used:</b> <span class="fill">list your tools, and one place they got it wrong</span></p>
+<p>Parts of the code come from the open-source L.A.R.A project; I reworked the agents, retrieval, safeguards and evaluation. <b>AI tools used:</b> Claude (Anthropic) for planning, code and research.</p>
 </body></html>

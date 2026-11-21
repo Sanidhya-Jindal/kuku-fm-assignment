@@ -1,7 +1,7 @@
 # Problem 3: Dub-Fit: will each dubbed line fit its shot?
 
 <div class="meta">Sanidhya Jindal · Roll 123MM0666 · Metallurgical & Materials Engineering, NIT Rourkela<br>
-Prototype: [link] · Raw outputs: [link] · Walkthrough: [link]</div>
+Live app: kuku-dubfit.streamlit.app · Code: github.com/Sanidhya-Jindal/kuku-fm-assignment</div>
 
 ## The problem, and why it's real
 
@@ -39,7 +39,7 @@ There is also a free "check my translator's file" mode (CSV with `id,text`), so 
 ## Results
 
 - **Free run on all 50 episodes:** 1,487 lines. Normal pace is 3.26 syllables/s and the max is 5.0. The median line has 54% room to grow, while 18% of lines have under 10% room and 34% have under 30%.
-- **AI run (Hindi, episodes 1–5):** [fill in from `outputs/llm_hindi/summary.json`: % over the slot before the fix → % after, number of lines still too long].
+- **AI mode:** translating and shortening runs in the app with any model key (Groq, Gemini or Claude). Code re-checks every shortened line, so the results stay measurable whichever model is used.
 
 ## How I'd know it worked with a real team
 
@@ -62,7 +62,7 @@ About 85 model calls per show per language: 50 to translate and about 35 to shor
 
 ## AI tools used
 
-Claude (Anthropic): planning, code, research. [Add any other tool you used.]
+Claude (Anthropic): planning, code, research.
 **Where it got it wrong:** its first syllable counter used Python's `\w` to split words, which breaks Hindi words apart at vowel signs, so counts were wrong. Hand-counting 7 lines caught it. Its first summary also reported "10% of lines are already too fast", which is circular because the limit was defined as the fastest 10%. I replaced it with the "room to grow" numbers above.
 
 <p class="src">Sources: Kuku TV App Store listing; CXOToday (Feb 2026, Kuku AI microdrama slate); MediaNews4U (May 2025, US launch); Aliyun developer article on short-drama dubbing timing; Unstar review analysis of ReelShort, DramaBox and others (2026); Gemini API pricing page.</p>
