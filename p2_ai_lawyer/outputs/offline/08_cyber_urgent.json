@@ -1,0 +1,57 @@
+{
+  "topic": "cyber",
+  "case": {
+    "topic": "cyber",
+    "language": "unknown (offline mode replies in English)",
+    "what_happened": "Someone called pretending to be from my bank, I shared the OTP and Rs 15,000 got deducted from my UPI 20 minutes ago.",
+    "timeline": [],
+    "amount": "15000",
+    "other_party": "",
+    "user_name": "unknown",
+    "evidence_have": [],
+    "evidence_missing": [
+      "transaction / UTR IDs",
+      "screenshots",
+      "fraudster's number or UPI ID",
+      "bank SMS alerts",
+      "exact time of the fraud"
+    ],
+    "questions": [
+      "When exactly did this happen (dates)?",
+      "How much money is involved?",
+      "What proof do you have in writing?"
+    ]
+  },
+  "answer": "**What I understood:** Online / UPI fraud.\n\n**Where you stand:**\n- Report financial cyber fraud immediately by calling 1930 or on the National Cyber Crime Reporting Portal, cybercrime.gov.in. [F1]\n- Reporting within the first hours (the 'golden hour') gives the best chance of the money being frozen. A 1930 report is not an FIR and does not automatically reverse the payment; report even if time has passed. [F2]\n- Also tell your bank or wallet right away and block the card/UPI, and keep screenshots, transaction IDs and the fraudster's number. [F3]\n\n**What you can do next:**\n1. Call 1930 now, or report on cybercrime.gov.in.\n2. Call your bank and block the card/UPI.\n3. Save every screenshot and transaction ID. Do not delete the chat.\n\n**Proof to collect:** transaction / UTR IDs, screenshots, fraudster's number or UPI ID, bank SMS alerts, exact time of the fraud.\n\n**When you need a real lawyer:** if the other side sends a legal reply, if police or a court gets involved, or if the amount is large. Free legal aid: 15100 [G1].\n\n**Questions for you:** When exactly did this happen (dates)? How much money is involved? What proof do you have in writing?",
+  "draft": "DRAFT - for calling 1930 / filing at cybercrime.gov.in and for your bank. Fill every blank.\n\nWhat happened (in short): Someone called pretending to be from my bank, I shared the OTP and Rs 15,000 got deducted from my UPI 20 minutes ago.\nDate and time of each payment: [____]\nAmount lost: Rs 15000\nYour bank / UPI app and account (last 4 digits only): [____]\nTransaction / UTR IDs: [____]\nFraudster's phone number / UPI ID / link / website: [____]\nProof saved (screenshots, SMS, call log): [____]\n\nBank letter: \"I did not authorise transaction(s) [____] on [____] for Rs [____]. Please block my card/UPI, raise a fraud\ndispute, and share the complaint reference number. I have reported it on 1930 (ref: [____]).\"\n",
+  "sources": [
+    {
+      "id": "F1",
+      "source": "https://en.wikipedia.org/wiki/National_Cybercrime_Reporting_Portal"
+    },
+    {
+      "id": "F2",
+      "source": "https://the420.in/?p=95060"
+    },
+    {
+      "id": "F3",
+      "source": "https://the420.in/?p=95060"
+    },
+    {
+      "id": "G1",
+      "source": "https://nalsa.gov.in/services/legal-aid/eligibility?locale=ma"
+    }
+  ],
+  "checks": {
+    "removed_unverified_law": [],
+    "unknown_fact_ids": [],
+    "lawyer_flags": [],
+    "raw_answer_before_checks": "**What I understood:** Online / UPI fraud.\n\n**Where you stand:**\n- Report financial cyber fraud immediately by calling 1930 or on the National Cyber Crime Reporting Portal, cybercrime.gov.in. [F1]\n- Reporting within the first hours (the 'golden hour') gives the best chance of the money being frozen. A 1930 report is not an FIR and does not automatically reverse the payment; report even if time has passed. [F2]\n- Also tell your bank or wallet right away and block the card/UPI, and keep screenshots, transaction IDs and the fraudster's number. [F3]\n\n**What you can do next:**\n1. Call 1930 now, or report on cybercrime.gov.in.\n2. Call your bank and block the card/UPI.\n3. Save every screenshot and transaction ID. Do not delete the chat.\n\n**Proof to collect:** transaction / UTR IDs, screenshots, fraudster's number or UPI ID, bank SMS alerts, exact time of the fraud.\n\n**When you need a real lawyer:** if the other side sends a legal reply, if police or a court gets involved, or if the amount is large. Free legal aid: 15100 [G1].\n\n**Questions for you:** When exactly did this happen (dates)? How much money is involved? What proof do you have in writing?"
+  },
+  "input": {
+    "id": "08_cyber_urgent",
+    "text": "Someone called pretending to be from my bank, I shared the OTP and Rs 15,000 got deducted from my UPI 20 minutes ago.",
+    "expect_topic": "cyber",
+    "expect_lawyer": false
+  }
+}

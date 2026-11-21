@@ -1,0 +1,61 @@
+{
+  "correct": 10,
+  "total": 11,
+  "results": [
+    {
+      "sentence": "You can file a police case under Section 420 IPC for cheating.",
+      "is_fake": true,
+      "removed": true
+    },
+    {
+      "sentence": "Under Section 318 of the BNS this is cheating.",
+      "is_fake": true,
+      "removed": true
+    },
+    {
+      "sentence": "The Supreme Court ruled in Sharma v. Gupta that landlords must pay 18% interest.",
+      "is_fake": true,
+      "removed": true
+    },
+    {
+      "sentence": "The Payment of Wages Act, 1936 says salary must be paid by the 7th.",
+      "is_fake": true,
+      "removed": true
+    },
+    {
+      "sentence": "Section 27 of the Consumer Protection Act, 2019 lets you claim triple damages.",
+      "is_fake": true,
+      "removed": true
+    },
+    {
+      "sentence": "मकान मालिक पर धारा 406 के तहत केस होगा।",
+      "is_fake": true,
+      "removed": true
+    },
+    {
+      "sentence": "You have three years to file a consumer complaint.",
+      "is_fake": true,
+      "removed": false
+    },
+    {
+      "sentence": "You have two years to file under Section 69 of the Consumer Protection Act, 2019 [C4].",
+      "is_fake": false,
+      "removed": false
+    },
+    {
+      "sentence": "Call 1915, the National Consumer Helpline [C2].",
+      "is_fake": false,
+      "removed": false
+    },
+    {
+      "sentence": "The District Commission handles claims up to Rs 50 lakh [C3].",
+      "is_fake": false,
+      "removed": false
+    },
+    {
+      "sentence": "धारा 69 के तहत दो साल का समय है [C4]।",
+      "is_fake": false,
+      "removed": false
+    }
+  ]
+}

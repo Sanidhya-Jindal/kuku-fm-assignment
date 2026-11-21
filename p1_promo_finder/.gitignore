@@ -1,0 +1,9 @@
+*.txt
+!requirements.txt
+scripts/
+input/
+__pycache__/
+.env
+
+# Raw outputs quote Kuku's scripts: share them via a private Drive link, not a public repo
+outputs/

@@ -1,0 +1,8 @@
+__pycache__/
+.env
+# Kuku's input pack and anything quoting it stay out of this public repo
+*.txt
+!requirements.txt
+p1_promo_finder/outputs/
+p3_dubfit/outputs/
+docs/p1_promo_finder.*

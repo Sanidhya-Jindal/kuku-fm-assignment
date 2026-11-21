@@ -1,0 +1,67 @@
+{
+  "topic": "cheque",
+  "case": {
+    "topic": "cheque",
+    "language": "unknown (offline mode replies in English)",
+    "what_happened": "A friend gave me a cheque of Rs 50,000 to repay a loan. It bounced on 5 Nov 2026 for insufficient funds and I got the bank return memo the same day.",
+    "timeline": [
+      {
+        "date": "5 Nov 2026",
+        "event": "(see story)"
+      }
+    ],
+    "amount": "50000",
+    "other_party": "person who gave the cheque",
+    "user_name": "unknown",
+    "evidence_have": [
+      "memo"
+    ],
+    "evidence_missing": [
+      "the original cheque",
+      "bank return memo",
+      "proof of the debt (agreement, messages)",
+      "date you received the return memo"
+    ],
+    "questions": [
+      "When exactly did this happen (dates)?",
+      "How much money is involved?",
+      "What proof do you have in writing?"
+    ]
+  },
+  "answer": "**What I understood:** Cheque bounce.\n\n**Where you stand:**\n- Under Section 138 of the Negotiable Instruments Act, 1881, a bounced cheque can be a criminal offence, punishable with up to two years in prison or a fine up to twice the cheque amount. [Q1]\n- For a Section 138 case, a written demand notice must be sent to the person who gave the cheque within 30 days of getting the bank's return memo. [Q2]\n- After receiving the notice, the person who gave the cheque has 15 days to pay. [Q3]\n- If they do not pay within those 15 days, the complaint must be filed before the magistrate within one month (Section 142 of the Negotiable Instruments Act, 1881). A complaint filed before the 15 days end can be dismissed as premature. [Q4]\n\n**What you can do next:**\n1. Note the date you got the bank's return memo: the 30-day clock for the notice starts there.\n2. Send the demand notice (draft below) within 30 days.\n3. Wait 15 days after they receive it. If unpaid, file the complaint within the next month. A lawyer helps here because the dates are strict.\n\n**Proof to collect:** the original cheque, bank return memo, proof of the debt (agreement, messages), date you received the return memo.\n\n**When you need a real lawyer:** if the other side sends a legal reply, if police or a court gets involved, or if the amount is large. Free legal aid: 15100 [G1].\n\n**Questions for you:** When exactly did this happen (dates)? How much money is involved? What proof do you have in writing?",
+  "draft": "DRAFT - check every detail before sending. Not reviewed by a lawyer.\nSend by Speed Post / Registered Post with acknowledgement and keep the receipt. Email a copy too.\n\nLEGAL NOTICE / DEMAND NOTICE\n\nDate: 21 November 2026\n\nFrom: [____]\nAddress: [____]\nPhone / Email: [____]\n\nTo: person who gave the cheque\nAddress: [____]\n\nSubject: Demand to pay the cheque amount of Rs 50000\n\nSir/Madam,\n\n1. Facts:\n1. 5 Nov 2026: (see story)\n\nCheque details: Cheque No. [____], dated [____], for Rs 50000, drawn on [____] bank. It was returned unpaid on [____] with the reason \"[____]\" (bank return memo received on [____]).\n\n2. Proof I have: memo\n\n3. Despite my requests, you have not done so. I call upon you to pay the cheque amount of Rs 50000 within 15 days of receiving this notice.\n\n4. This notice is issued under Section 138 of the Negotiable Instruments Act, 1881. If you fail to pay the cheque amount within 15 days of receiving this notice, I will file a complaint against you before the competent Magistrate.\n\n5. Please treat this as final notice before legal action.\n\n[____]\n(Signature)\n",
+  "sources": [
+    {
+      "id": "G1",
+      "source": "https://nalsa.gov.in/services/legal-aid/eligibility?locale=ma"
+    },
+    {
+      "id": "Q1",
+      "source": "https://blog.ipleaders.in/?p=128955"
+    },
+    {
+      "id": "Q2",
+      "source": "https://www.legalserviceindia.com/Legal-Articles/?p=35933"
+    },
+    {
+      "id": "Q3",
+      "source": "https://www.legalserviceindia.com/Legal-Articles/?p=35933"
+    },
+    {
+      "id": "Q4",
+      "source": "https://cdnbbsr.s3waas.gov.in/s3ec0369f268fb2ba1068615b3219c6e8f/uploads/2024/09/2024092355.pdf"
+    }
+  ],
+  "checks": {
+    "removed_unverified_law": [],
+    "unknown_fact_ids": [],
+    "lawyer_flags": [],
+    "raw_answer_before_checks": "**What I understood:** Cheque bounce.\n\n**Where you stand:**\n- Under Section 138 of the Negotiable Instruments Act, 1881, a bounced cheque can be a criminal offence, punishable with up to two years in prison or a fine up to twice the cheque amount. [Q1]\n- For a Section 138 case, a written demand notice must be sent to the person who gave the cheque within 30 days of getting the bank's return memo. [Q2]\n- After receiving the notice, the person who gave the cheque has 15 days to pay. [Q3]\n- If they do not pay within those 15 days, the complaint must be filed before the magistrate within one month (Section 142 of the Negotiable Instruments Act, 1881). A complaint filed before the 15 days end can be dismissed as premature. [Q4]\n\n**What you can do next:**\n1. Note the date you got the bank's return memo: the 30-day clock for the notice starts there.\n2. Send the demand notice (draft below) within 30 days.\n3. Wait 15 days after they receive it. If unpaid, file the complaint within the next month. A lawyer helps here because the dates are strict.\n\n**Proof to collect:** the original cheque, bank return memo, proof of the debt (agreement, messages), date you received the return memo.\n\n**When you need a real lawyer:** if the other side sends a legal reply, if police or a court gets involved, or if the amount is large. Free legal aid: 15100 [G1].\n\n**Questions for you:** When exactly did this happen (dates)? How much money is involved? What proof do you have in writing?"
+  },
+  "input": {
+    "id": "07_cheque_en",
+    "text": "A friend gave me a cheque of Rs 50,000 to repay a loan. It bounced on 5 Nov 2026 for insufficient funds and I got the bank return memo the same day.",
+    "expect_topic": "cheque",
+    "expect_lawyer": false
+  }
+}

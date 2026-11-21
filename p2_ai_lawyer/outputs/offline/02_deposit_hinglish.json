@@ -1,0 +1,62 @@
+{
+  "topic": "deposit",
+  "case": {
+    "topic": "deposit",
+    "language": "unknown (offline mode replies in English)",
+    "what_happened": "Makan malik ne mera 2 mahine ka advance 30000 wapas nahi kiya, flat chhode 3 mahine ho gaye. Kya karu?",
+    "timeline": [],
+    "amount": "unknown",
+    "other_party": "landlord",
+    "user_name": "unknown",
+    "evidence_have": [],
+    "evidence_missing": [
+      "rent agreement",
+      "deposit payment proof",
+      "rent receipts",
+      "move-out / key handover proof",
+      "photos of the flat when you left",
+      "chats or emails with the landlord"
+    ],
+    "questions": [
+      "When exactly did this happen (dates)?",
+      "How much money is involved?",
+      "What proof do you have in writing?"
+    ]
+  },
+  "answer": "**What I understood:** Security deposit not returned by landlord.\n\n**Where you stand:**\n- Rent is a state subject. The Model Tenancy Act, 2021 is a model law that each state may adopt; it is not automatically in force in every state. [D1]\n- Under the Model Tenancy Act, 2021, the security deposit may not exceed two months' rent for residential premises (six months for non-residential). This applies only where the state has adopted a law based on it. [D2]\n- Under the Model Tenancy Act, 2021, the deposit is to be returned when the tenant hands back possession, after lawful deductions. [D3]\n- Practical route: keep the rent agreement, rent payment proof, deposit payment proof and move-out photos; send a written demand (or legal notice); if still unpaid, a money recovery claim can be filed in the local civil court, or before the rent authority/court where the state has one. [D4]\n\n**What you can do next:**\n1. Write to the landlord (WhatsApp + email) asking for the deposit by a clear date. Keep it polite and factual.\n2. If no reply, send a legal notice (draft below) by Speed Post.\n3. Still unpaid: file a money recovery claim, or go to the rent authority if your state has one. Lok Adalat is a cheaper way to settle.\n\n**Proof to collect:** rent agreement, deposit payment proof, rent receipts, move-out / key handover proof, photos of the flat when you left, chats or emails with the landlord.\n\n**When you need a real lawyer:** if the other side sends a legal reply, if police or a court gets involved, or if the amount is large. Free legal aid: 15100 [G1].\n\n**Questions for you:** When exactly did this happen (dates)? How much money is involved? What proof do you have in writing?",
+  "draft": "DRAFT - check every detail before sending. Not reviewed by a lawyer.\nSend by Speed Post / Registered Post with acknowledgement and keep the receipt. Email a copy too.\n\nLEGAL NOTICE / DEMAND NOTICE\n\nDate: 21 November 2026\n\nFrom: [____]\nAddress: [____]\nPhone / Email: [____]\n\nTo: landlord\nAddress: [____]\n\nSubject: Demand to return my security deposit of Rs [____]\n\nSir/Madam,\n\n1. Facts:\n1. [____]\n\n2. Proof I have: [____]\n\n3. Despite my requests, you have not done so. I call upon you to return my security deposit of Rs [____] within 15 (fifteen) days of receiving this notice.\n\n4. If the amount is not returned within the time given, I will be constrained to initiate appropriate legal proceedings for recovery of the amount with interest and costs, entirely at your risk as to costs.\n\n5. Please treat this as final notice before legal action.\n\n[____]\n(Signature)\n",
+  "sources": [
+    {
+      "id": "D1",
+      "source": "https://www.deccanherald.com/opinion/model-tenancy-act-a-mixed-bag-1131814.html"
+    },
+    {
+      "id": "D2",
+      "source": "https://prsindia.org/billtrack/the-model-tenancy-act-2021"
+    },
+    {
+      "id": "D3",
+      "source": "https://www.business-standard.com/podcast/current-affairs/what-is-the-model-tenancy-act-122010400085_1.html"
+    },
+    {
+      "id": "D4",
+      "source": "general guidance"
+    },
+    {
+      "id": "G1",
+      "source": "https://nalsa.gov.in/services/legal-aid/eligibility?locale=ma"
+    }
+  ],
+  "checks": {
+    "removed_unverified_law": [],
+    "unknown_fact_ids": [],
+    "lawyer_flags": [],
+    "raw_answer_before_checks": "**What I understood:** Security deposit not returned by landlord.\n\n**Where you stand:**\n- Rent is a state subject. The Model Tenancy Act, 2021 is a model law that each state may adopt; it is not automatically in force in every state. [D1]\n- Under the Model Tenancy Act, 2021, the security deposit may not exceed two months' rent for residential premises (six months for non-residential). This applies only where the state has adopted a law based on it. [D2]\n- Under the Model Tenancy Act, 2021, the deposit is to be returned when the tenant hands back possession, after lawful deductions. [D3]\n- Practical route: keep the rent agreement, rent payment proof, deposit payment proof and move-out photos; send a written demand (or legal notice); if still unpaid, a money recovery claim can be filed in the local civil court, or before the rent authority/court where the state has one. [D4]\n\n**What you can do next:**\n1. Write to the landlord (WhatsApp + email) asking for the deposit by a clear date. Keep it polite and factual.\n2. If no reply, send a legal notice (draft below) by Speed Post.\n3. Still unpaid: file a money recovery claim, or go to the rent authority if your state has one. Lok Adalat is a cheaper way to settle.\n\n**Proof to collect:** rent agreement, deposit payment proof, rent receipts, move-out / key handover proof, photos of the flat when you left, chats or emails with the landlord.\n\n**When you need a real lawyer:** if the other side sends a legal reply, if police or a court gets involved, or if the amount is large. Free legal aid: 15100 [G1].\n\n**Questions for you:** When exactly did this happen (dates)? How much money is involved? What proof do you have in writing?"
+  },
+  "input": {
+    "id": "02_deposit_hinglish",
+    "text": "Makan malik ne mera 2 mahine ka advance 30000 wapas nahi kiya, flat chhode 3 mahine ho gaye. Kya karu?",
+    "expect_topic": "deposit",
+    "expect_lawyer": false
+  }
+}
