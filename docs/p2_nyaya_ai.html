@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Nyaya AI: Problem 2 solution doc</title>
+<style>
+@font-face{font-family:Plex;src:url(fonts/ibm-plex-sans-latin-400-normal.woff2);font-weight:400}
+@font-face{font-family:Plex;src:url(fonts/ibm-plex-sans-latin-400-italic.woff2);font-weight:400;font-style:italic}
+@font-face{font-family:Plex;src:url(fonts/ibm-plex-sans-latin-500-normal.woff2);font-weight:500}
+@font-face{font-family:Plex;src:url(fonts/ibm-plex-sans-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:PlexSerif;src:url(fonts/ibm-plex-serif-latin-500-normal.woff2);font-weight:500}
+@font-face{font-family:PlexSerif;src:url(fonts/ibm-plex-serif-latin-600-normal.woff2);font-weight:600}
+@page{size:A4;margin:13mm 15mm 12mm 15mm;
+  @bottom-right{content:"Nyaya AI, page " counter(page) " of 2";font-family:Plex;font-size:8.5pt;color:#7A8594}}
+:root{--ink:#17202C;--navy:#1F3350;--muted:#56606D;--rule:#D5DAE1;--gold:#A8741A;--wash:#F2F5F8}
+body{font-family:Plex;font-size:11pt;line-height:1.38;color:var(--ink);margin:0}
+h1,h2{font-family:PlexSerif;color:var(--navy);margin:0}
+h2{font-size:14pt;font-weight:600;margin:11px 0 4px;padding-top:7px;border-top:1px solid var(--rule)}
+p{margin:0 0 6px}
+b{font-weight:600}
+ul{margin:2px 0 6px;padding-left:16px}
+li{margin:0 0 3px}
+code{font-family:Plex;font-weight:500;color:var(--navy)}
+
+.head{display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:10px;border-bottom:3px solid var(--navy)}
+.head h1{font-size:30pt;font-weight:600;line-height:1}
+.head .sub{font-size:11.5pt;color:var(--muted);margin-top:5px}
+.who{text-align:right;font-size:10pt;color:var(--muted);line-height:1.45}
+.who b{color:var(--ink);font-size:11pt}
+.links{font-size:9.5pt;color:var(--muted);margin:7px 0 0}
+.links span{margin-right:16px}
+
+.rule-box{margin:12px 0 4px;padding:9px 13px;border-left:4px solid var(--gold);background:var(--wash)}
+.rule-box p{margin:0;font-size:11.5pt}
+
+.flow{display:flex;align-items:stretch;gap:0;margin:8px 0 6px}
+.step{flex:1;border:1px solid var(--rule);border-radius:4px;padding:6px 7px;background:#fff;font-size:9.5pt;line-height:1.3}
+.step b{display:block;font-size:10pt;color:var(--navy);margin-bottom:2px}
+.arrow{width:12px;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:11pt}
+.step.split{background:var(--wash)}
+
+.safes{margin:2px 0 4px}.safes tr,.safe{break-inside:avoid}.safes td.sc{border:0;padding:0 9px 0 0;width:50%}.safes td.sc+td.sc{padding:0 0 0 9px}
+.safe{border-top:2px solid var(--navy);padding-top:5px;margin-bottom:8px}
+.safe b{color:var(--navy)}
+.safe p{font-size:10.5pt;margin:2px 0 0}
+
+table{border-collapse:collapse;width:100%;font-size:10pt;margin:4px 0 6px}
+th{text-align:left;font-weight:600;color:var(--navy);border-bottom:1.5px solid var(--navy);padding:3px 6px}
+td{border-bottom:1px solid var(--rule);padding:3px 6px;vertical-align:top}
+
+.fill{background:#FFF4D6;border:1px dashed var(--gold);border-radius:3px;padding:1px 5px;color:#6B4A0C;font-size:10pt}
+.small{font-size:9pt;color:var(--muted)}
+.page2{break-before:page}
+</style></head><body>
+
+<div class="head">
+  <div><h1>Nyaya AI</h1><div class="sub">Problem 2: Build an AI Lawyer</div></div>
+  <div class="who"><b>Sanidhya Jindal</b><br>Roll 123MM0666<br>Metallurgical &amp; Materials Engineering, NIT Rourkela</div>
+</div>
+<div class="links"><span>Code: github.com/Sanidhya-Jindal/nyaya-ai-</span><span>Tests: kuku-fm-assignment/p2_nyaya_ai</span><span>Video: <span class="fill">add link</span></span></div>
+
+<div class="rule-box"><p><b>The one rule it is built around:</b> answer only from legal documents it has actually found, and say so plainly when it finds nothing.</p></div>
+
+<h2>Why this problem</h2>
+<p>Most people never get help with everyday legal trouble: a deposit that isn't returned, a refund that never comes, salary that stops. They don't know which law applies, and a lawyer feels expensive. AI can close that gap only if people can trust it, and the biggest failure of AI legal tools is inventing laws and cases with total confidence. So trust comes first: every answer must point to sources the system actually retrieved.</p>
+
+<h2>Assumptions</h2>
+<ul>
+<li>People ask about <b>Indian law</b>, in text. Questions about another country's law get a polite decline, not a guess.</li>
+<li>They want to understand where they stand and what to do next. Nyaya explains; it doesn't replace a lawyer, and every answer says so.</li>
+</ul>
+
+<h2>How it works</h2>
+<div class="flow">
+  <div class="step"><b>Intent gate</b>Greeting, non-Indian law, or a real legal question?</div><div class="arrow">›</div>
+  <div class="step"><b>Rewrite</b>Turns follow-ups into a standalone search using the chat so far</div><div class="arrow">›</div>
+  <div class="step split"><b>Hybrid search</b>Legal library (FAISS) and live web (Tavily) in parallel</div><div class="arrow">›</div>
+  <div class="step"><b>Answer</b>Citizen: plain answer. Lawyer: draft and critique loop</div><div class="arrow">›</div>
+  <div class="step"><b>Show</b>Answer with its sources and a quality score</div>
+</div>
+<p><b>Two modes.</b> <i>Citizen</i> gives plain-language guidance on rights and procedures. <i>Lawyer</i> runs five agents in a loop (issue extractor, planner, retriever, drafter, critic) until the critic scores the draft 0.7 or higher, or three rounds pass.</p>
+<p><b>The legal library</b> has 39 Indian legal documents (recent acts, judgments, and question-and-answer sets on the IPC, CrPC and Constitution), split into 4,209 searchable chunks. The web search blocks social-media and user-generated sites as sources.</p>
+<p class="small">Built with FastAPI, LangGraph (13 steps across the two agents), Groq running Llama 3.1 8B, FAISS with all-MiniLM-L6-v2 embeddings, Tavily, SQLite chat history, and a React frontend with Clerk sign-in. A Streamlit version runs without the frontend.</p>
+
+<h2>How it avoids made-up laws</h2>
+<table class="safes"><tr><td class="sc"><div class="safe"><b>A measured relevance cutoff</b><p>Search returns 8 candidates and keeps only those within a distance of 1.25. I measured it: real legal questions scored 0.70 to 1.15, off-topic ones 1.31 to 1.76. Weak matches are dropped, not used as filler.</p></div></td><td class="sc"><div class="safe"><b>Self-critique</b><p>In lawyer mode a separate critic agent reviews every draft and sends weak ones back before the user sees them.</p></div></td></tr><tr><td class="sc"><div class="safe"><b>Honest failure</b><p>If the library and the web both come back empty, it never asks the model to answer anyway. It says it couldn't find reliable information.</p></div></td><td class="sc"><div class="safe"><b>Clear labels</b><p>The score is called a quality score, not an accuracy score. Every answer says it isn't legal advice and that cited acts and judgments should be checked.</p></div></td></tr><tr><td class="sc"><div class="safe"><b>Grounded writing</b><p>The model is told never to invent or guess a case, citation, section or article, and to say so when its sources lack one.</p></div></td><td class="sc"><div class="safe"><b>Sources on show</b><p>Every answer lists where it came from, so a user or a lawyer can check it in seconds.</p></div></td></tr></table>
+
+<h2>Test cases and results</h2>
+<table>
+<tr><th style="width:24%">Type</th><th>Cases (12 in total)</th><th style="width:30%">What a good answer does</th></tr>
+<tr><td>Everyday problems</td><td>Security deposit (English and Hinglish), online refund, unpaid salary, cheque bounce, a confusing legal notice</td><td>Explains the position and next steps, from sources</td></tr>
+<tr><td>Urgent</td><td>UPI fraud 20 minutes ago</td><td>Gives the immediate steps first</td></tr>
+<tr><td>Trap</td><td>Asks for "an IPC section and a Supreme Court judgment"</td><td>Names nothing it didn't find</td></tr>
+<tr><td>Risky</td><td>The user is accused, with a court date next week</td><td>Sends them to a lawyer</td></tr>
+<tr><td>Mode and scope</td><td>Lawyer-mode wage question; a California law question; a greeting</td><td>Researched answer; declines; skips research</td></tr>
+</table>
+<p>The test script saves every raw answer and flags any <b>case name missing from its listed sources</b>, the first sign of an invented citation.</p>
+<p><b>Results:</b> <span class="fill">fill in from outputs/summary.json: median answer time, how many answers point to a lawyer, how many name an unsourced case</span></p>
+
+<h2>Where it fails</h2>
+<ul>
+<li><b>No hard check on citations yet.</b> The no-invention rule is an instruction backed by retrieval. Nothing in code compares each cited section against the retrieved text. That is the first thing I would add.</li>
+<li><b>The library is narrow.</b> It leans toward recent acts and judgments, so everyday tenancy, consumer and wage questions rely mostly on web search, which is less trustworthy.</li>
+<li><b>Text and English only,</b> no voice or drafted notices yet, and the quality judge isn't checked against human grades.</li>
+</ul>
+
+<h2>Scale and cost</h2>
+<p>Each question costs a few calls to Groq's low-cost Llama 3.1 8B plus one web search, the main cost once Tavily's free tier runs out. Greetings skip research, cutting the cost of non-legal messages by about 97%. A larger model is one setting away (<code>GROQ_MODEL</code>); new laws mean adding documents and rebuilding the index. A lawyer reviews the library and a monthly sample of answers.</p>
+
+<h2>Credits and AI tools</h2>
+<p>Parts of the code come from the open-source L.A.R.A project; I reworked the agents, retrieval, safeguards and evaluation. <b>AI tools used:</b> <span class="fill">list your tools, and one place they got it wrong</span></p>
+</body></html>
