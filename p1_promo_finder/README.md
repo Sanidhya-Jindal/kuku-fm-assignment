@@ -15,7 +15,7 @@ export LLM_PROVIDER=gemini            # or anthropic, or openai (= any OpenAI-st
 export LLM_MODEL=gemini-3.8-flash     # copy the exact model ID from your provider console
 export LLM_API_KEY=your_key           # free key from aistudio.google.com
 # export LLM_BASE_URL=https://api.groq.com/openai/v1   (only for openai-style servers)
-python run.py --input "path/to/scripts_folder" --mode llm
+python run.py --input "path/to/scripts_folder" --mode llm   # add --chunk 1 if the free tier says the request is too large
 
 # 3) Web app
 streamlit run app.py
