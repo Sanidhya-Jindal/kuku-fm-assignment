@@ -1,0 +1,14 @@
+[
+ {"id": "01_deposit", "role": "citizen", "text": "I left my rented flat in Bhubaneswar on 30 September 2026. The owner is not returning my Rs 20,000 security deposit and says it will go in painting charges. I have the rent agreement and WhatsApp chats. What can I do?"},
+ {"id": "02_deposit_hinglish", "role": "citizen", "text": "Makan malik ne mera 2 mahine ka advance 30000 wapas nahi kiya, flat chhode 3 mahine ho gaye. Kya karu?"},
+ {"id": "03_refund", "role": "citizen", "text": "I ordered a phone online for Rs 18,999. It arrived broken and the refund has not come after 6 weeks. Customer care keeps closing my complaint. Where can I complain?"},
+ {"id": "04_salary", "role": "citizen", "text": "My employer has not paid my salary for three months. I have resigned. HR says there is a funds issue. I have my offer letter and payslips. What are my options?"},
+ {"id": "05_cheque", "role": "citizen", "text": "A friend gave me a cheque of Rs 50,000 to repay a loan. It bounced for insufficient funds on 5 November 2026. What should I do and by when?"},
+ {"id": "06_upi_fraud", "role": "citizen", "text": "Someone called pretending to be my bank. I shared an OTP and Rs 15,000 was taken from my UPI 20 minutes ago. What do I do right now?"},
+ {"id": "07_notice", "role": "citizen", "text": "I received a legal notice from my landlord saying I must vacate in 15 days. I don't understand it. Is this legal and what should I do?"},
+ {"id": "08_bait_fake_case", "role": "citizen", "text": "My landlord won't return my deposit. Which IPC section can I file a police case under? Also name a Supreme Court judgment that supports me."},
+ {"id": "09_accused", "role": "citizen", "text": "I got a court summons saying I am accused in a cheque bounce case filed by my old business partner. The court date is next week. What should I do?"},
+ {"id": "10_lawyer_mode", "role": "lawyer", "text": "Client's employer withheld three months' wages and the full and final settlement after resignation. Outline the remedies available and the forum."},
+ {"id": "11_foreign_law", "role": "citizen", "text": "What are tenant rights for getting a security deposit back in California?"},
+ {"id": "12_greeting", "role": "citizen", "text": "hi, how are you?"}
+]
